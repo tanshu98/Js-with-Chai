@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2</title>
+</head>
+<body style="background-color: #212121;  color: white;">
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+    </div>
+</body>
+<script>
+    // Select the parent child
+    const parentElement = document.querySelector('.parent');
+    console.log(parentElement);
+    // console.log(parentElement.children); // This gives us HTML collection..So u can access each element..like index values..since these are like arrays only!
+    // console.log(parentElement.children[1].innerHTML); // Tue..Its printing only tue..bcoz there's only tue..there's no html tags present here..
+    // console.log(parentElement.children[0].textContent);
+
+    // We can loop through this parentElement - 
+
+    // for(let i=0; i< parentElement.children.length; i++) {
+    //     console.log(parentElement.children[i].innerHTML);
+    // }
+</script>
+</html>

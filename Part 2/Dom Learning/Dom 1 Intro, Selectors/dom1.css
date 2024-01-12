@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-black{
+    background-color: #212121;
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.container p {
+    padding: 10px;
+    line-height: 1.5rem;
+    font-size: 18px;
+}
+.heading{
+    margin-bottom: 12px;
+    font-size: 30px;
+
+}
