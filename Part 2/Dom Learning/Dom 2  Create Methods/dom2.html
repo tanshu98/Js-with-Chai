@@ -15,16 +15,32 @@
 </body>
 <script>
     // Select the parent child
-    const parentElement = document.querySelector('.parent');
-    console.log(parentElement);
-    // console.log(parentElement.children); // This gives us HTML collection..So u can access each element..like index values..since these are like arrays only!
-    // console.log(parentElement.children[1].innerHTML); // Tue..Its printing only tue..bcoz there's only tue..there's no html tags present here..
-    // console.log(parentElement.children[0].textContent);
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+    // console.log(parent.children); // This gives us HTML collection..So u can access each element..like index values..since these are like arrays only!
+    // console.log(parent.children[1].innerHTML); // Tue..Its printing only tue..bcoz there's only tue..there's no html tags present here..
+    // console.log(parent.children[0].textContent);
 
-    // We can loop through this parentElement - 
+    // We can loop through this parent - 
 
-    // for(let i=0; i< parentElement.children.length; i++) {
-    //     console.log(parentElement.children[i].innerHTML);
+    // for(let i=0; i< parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
     // }
+    parent.children[1].style.color = 'orange';
+    // console.log(parent.firstElementChild); // Returns the first child element
+    // console.log(parent.lastElementChild); // Returns the last child element
+    // Note: Here..we are moving from parent to child
+    // Similarly..we can move from child to parent also
+
+    const dayOne = document.querySelector('.day');
+    console.log(dayOne);
+    // Now we can select parent element too..like this - 
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling); // Returns the first following sibling that is an element, and null otherwise.
+
+    console.log('Nodes:-', parent.childNodes);
+
+   
+
 </script>
 </html>
