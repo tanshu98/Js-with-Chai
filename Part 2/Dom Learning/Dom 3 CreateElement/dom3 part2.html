@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body style="background-color: #212122; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang) {
+        // create li + add content, select ul and append the created ul inside the ul child
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`
+        const ul = document.querySelector('.language');
+        ul.appendChild(li);
+
+        // document.body.appendChild(ul); - Note: Here..ul is already attached to body..hence we dont have to do this step!
+    }
+    addLanguage('Python');
+
+    // Now this function is not at all optimized..bcoz..js has to traverse evertime..we call this function.from starting to end..so if we are calling the function 1Lakhs times..it will have to traverse 1Lakh times!!
+    // So this is not a very good apporach!
+
+    // Better way - 
+
+    function optiAddLanguage(lang){
+        const li = document.createElement('li');
+        // we can use createTextNode approach!
+        const addText = document.createTextNode(lang);
+        li.appendChild(addText);
+        document.querySelector('.language').appendChild(li);
+    }
+
+    optiAddLanguage('Java')
+
+    // Edit - 
+    // We wanna edit the li elements too
+    // select the li element which u wanna edit - 
+    // /* Selects the second element of div siblings */1
+    const secondLang = document.querySelector('li:nth-child(2)');
+    console.log(secondLang);
+    const newli = document.createElement('li');
+    newli.textContent = 'Mojo'; // We can also use innerHTMl or createTextNode method too
+    // Now we wanna replace this created li with secondLang content
+    secondLang.replaceWith(newli);
+
+    // Practice - 
+
+    // Replace 3rd LI with some other value - 
+    // Select 3rd lI element, create a new li there, add some content in that new li..and then add that whole third li content to main 3rd li..
+
+    const thirdLang = document.querySelector('li:nth-child(3)');
+    // console.log(thirdLang);
+    const newLi3 = document.createElement('li');
+    const thirdLiData = document.createTextNode('laravel');
+    // console.log(thirdLiData);
+    newLi3.appendChild(thirdLiData);
+    thirdLang.replaceWith(newLi3);
+
+    // Replace 1st li element - 
+    const firstLang = document.querySelector('li:first-Child');
+    // console.log(firstLang);
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+    // Remove - 
+    // Lets Remove the last element - 
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove(); 
+</script>
+</html>

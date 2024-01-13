@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 3</title>
+</head>
+<body style="background-color: #212122; color: white;" >
+    
+</body>
+<script>
+    // Create a div element using dom
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = 'main';
+    // div.id = 'mainId'
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute('title', 'generated title');
+    div.style.backgroundColor = 'green';
+    div.style.padding = '10px';
+    // Now look..eventhough we have created the div and added some many properties..but it wont show on the webpage..
+    // This is becoz..div is still stored in the memory..its isnt attached to the webpage..
+
+    //Now lets try to add a text in the div..
+    // We can add text by 2 ways..
+
+    // div.innerText = 'Delhi is freezing right now!'; // Normal way
+    // Many people say this is not a optimized way..becoz what the innerText does is..it overwrites the orignal value..
+
+    // Another way - 
+    const addText = document.createTextNode('Delhi is freezing right now!!')
+    // Adding this text in div,
+    div.appendChild(addText);
+//    Both mehods are good in their way..we can use any of them!!
+
+// Attaching the content in the document
+document.body.appendChild(div);
+</script>
+</html>
