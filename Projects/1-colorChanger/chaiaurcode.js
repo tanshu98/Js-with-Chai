@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.button');
 // const body = document.body;
 const body = document.querySelector('body');
 
-// Now if we wanna loop through these buttons node list.
+// Now if we wanna loop through these buttons node list. since we have to add same functionality in all the 4 buttons
 // Now since its a node list..we can apply for-each loop to these buttons :)
 
 // Next, we have to add something called as event listners..
