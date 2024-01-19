@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API's</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    Value State Description 0 UNSENT Client has been created. open() not called
+    yet. 1 OPENED open() has been called. 2 HEADERS_RECEIVED send() has been
+    called, and headers and status are available. 3 LOADING Downloading;
+    responseText holds partial data. 4 DONE The operation is complete.
+  </body>
+  <script>
+    // First we create an object using..
+    // XMLHttpRequest() => We can send and recieve data using this request. Now this is a class so we use new keyword along with XMLHttpRequest()
+    const requestURL = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestURL); // Now here we have opened this request..but to make it work..we have to call this method..
+    // We do this by using send method..
+    // NOw here the states keep changing..
+    // Now if we wanna keep track of this state change..we can do this..
+    xhr.onreadystatechange = function () { // This function will keep track of the state change
+      console.log(xhr.readyState); // Here we are getting 3 states..2,3,4
+      // so we will display data for a particular state - 
+      if(xhr.readyState === 4) {
+        // const data = (this.responseText); // We have to use this keyword for current context..So whenever we talk about current context we have to apply this keyword
+        // console.log(data.followers);  // THis is a string datatype
+        // whenever we get data back from server..it is in the form of string
+        // So for conversion we use JSON.parse() => Converts JSON String into javascript Object..
+        const data = JSON.parse(this.responseText); // get JS Object
+        console.log(data.followers);
+      }
+    };
+
+    // Assignment - 
+
+    // From object -> Get Photo url..followers and make a card..so when user clicks on button..u get this following data..!!
+    xhr.send();
+  </script>
+</html>
+
+<!--   v8 Engine -> Gives Debugging tools, API's access etc. So console.log() is also always becoz of this only -->
