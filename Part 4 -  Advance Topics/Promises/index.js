@@ -132,3 +132,6 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response)=> {
 }).then((data)=> { // we are storing the response.json() result in data paramter..we can display it directly!!
     console.log(data);
 }).catch((error)=> console.log(error))
+
+// Fetch - 
+
