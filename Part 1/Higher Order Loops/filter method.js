@@ -37,3 +37,5 @@ number.forEach((item)=> {
 
 console.log(newNums); // [ 5, 6, 7, 8, 9, 10 ]
 
+
+// NOTE: All the Coding Questions you will find in the Interview Section of this Repo

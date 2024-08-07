@@ -66,3 +66,6 @@ let gameObj = {
 // for (const [key, value] of gameObj) {
     // console.log(key ,':-', value); // gameObj is not iterable
 // }
+
+
+// NOTE: All the Coding Questions you will find in the Interview Section of this Repo

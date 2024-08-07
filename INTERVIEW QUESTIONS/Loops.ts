@@ -118,4 +118,22 @@ do{
     return factorial;
     
 }
-console.log(factorialNos(5));
+// console.log(factorialNos(5));
+
+// Task 8: WAP to print nos from 1 to 10 , but skip the number 5 using continue statement
+
+// for(let i=1; i<=11; i++) {
+//     if(i===5){
+//         continue;
+//     }
+//     console.log(i);
+    
+// }
+
+// // Task 8: WAP to print nos from 1 to 10 , but stop the loop when the number is 7 using break statement
+
+for(let i=1;i<=11; i++) {
+    if(i===8) break;
+    console.log(i);
+    
+}
