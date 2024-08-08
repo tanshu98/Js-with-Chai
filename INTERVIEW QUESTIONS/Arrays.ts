@@ -61,5 +61,84 @@ console.log(sumOfArrElements);
 
 // FILTER METHOD QUESTIONS - 
 
+// 1) Given an array of numbers, return a new array that has only the numbers that are 5 or greater.
+
+const arr = [3, 6, 8, 2,5,12,1];
+const noGreaterThenOrEqualToFive = arr.filter((num)=> num >=5);
+console.log(noGreaterThenOrEqualToFive);
+
+// 2) Given an array of strings, return a new array that only includes those that are 5 characters or fewer in length
+
+const arrStr = ["dog", "wolf", "by", "family", "eaten", "camping"];
+const strOfFiveChar = arrStr.filter((str)=> str.length <=5);
+console.log(strOfFiveChar);
+
+// 3) Given an array of people objects, return a new array that has filtered out all those who don't belong to the club.
+
+const peopleArr = [
+    { name: "Angelina Jolie", member: true },
+    { name: "Eric Jones", member: false },
+    { name: "Paris Hilton", member: true },
+    { name: "Kayne West", member: false },
+    { name: "Bob Ziroll", member: true }
+];
+
+const peopleWhoBelongToTheIlluminati = peopleArr.filter((people)=> people.member=== true);
+
+console.log(peopleWhoBelongToTheIlluminati);
+
+// Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
+
+const arrOfMovieWatchers = [
+    { name: "Angelina Jolie", age: 80 },
+    { name: "Eric Jones", age: 2 },
+    { name: "Paris Hilton", age: 5 },
+    { name: "Kayne West", age: 16 },
+    { name: "Bob Ziroll", age: 100 }
+];
+
+const EigtheenPlus = arrOfMovieWatchers.filter((e)=> e.age > 18);
+console.log(EigtheenPlus);
+
+
+// Activity 4: Array Iteration - "I'm Skipping this"
+
+// Task 10: Use a for loop to iterate over the array and log each element to the console.
+// Task 11: Use the forEach method to iterate over the array and log each element to the console.
+
+// Activity 5: Multi-Dimensional Arrays - 
+
+// Task 12: Create a 2D Array(Matrix) and log it to console.
+
+// MAP CODING QUESTIONS
+
+// 1. Example 2: Uppercasing Strings
+
+const words = ['apple', 'banana', 'cherry'];
+const wordsUpperCase = words.map((w)=> w.toUpperCase());
+console.log(wordsUpperCase);
+
+// 2. First Element upperCase and rest lower case
+
+const capitalLetters = words.map((w)=> w.charAt(0).toUpperCase() + w.slice(1))
+console.log(capitalLetters);
+
+// 3.  Extracting Object Properties
+
+const users = [
+
+    { name: 'Alice', age: 25 },
+  
+    { name: 'Bob', age: 30 },
+  
+    { name: 'Charlie', age: 22 }
+  
+  ];
+
+  const names = users.map((u)=> u.name);
+  console.log(names);
+  
+
+
 
 
