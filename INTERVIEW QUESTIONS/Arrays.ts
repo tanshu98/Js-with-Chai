@@ -83,9 +83,9 @@ const peopleArr = [
     { name: "Bob Ziroll", member: true }
 ];
 
-const peopleWhoBelongToTheIlluminati = peopleArr.filter((people)=> people.member=== true);
+// const peopleWhoBelongToTheIlluminati = peopleArr.filter((people)=> people.member=== true);
 
-console.log(peopleWhoBelongToTheIlluminati);
+// console.log(peopleWhoBelongToTheIlluminati);
 
 // Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
 
