@@ -37,3 +37,22 @@ const arrNames = ['Sam','Jonas','John','Katy'];
 const combineArrays = [...arrNames , ...arrNumbers];
 console.log(combineArrays);
 
+// Task 6: Use the Rest Operators in a function to accept an arbitary number of arguments,sum them and return the result
+
+const arbitaryFunc = (...numbers:any)=> {
+    return numbers.reduce((acc:any,curr:any)=> acc+curr,0);
+}
+
+const sumAll  = arbitaryFunc(1,2,3,4,5);
+console.log(sumAll);
+
+
+// Activity 4: Default Parameters - 
+
+// Task 7: 
+
+const defPara = (n1: number,n2=3)=> {
+    return n1 + n2;
+};
+
+console.log(defPara(2,5));
