@@ -17,4 +17,4 @@ let stringConcat = arr2.reduce((acc, num) => {
     return str += strNum;
 })
  
- console.log(stringConcat); // "123"
+ console.log(stringConcat); // "12
